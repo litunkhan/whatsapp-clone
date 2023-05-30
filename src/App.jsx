@@ -4,9 +4,9 @@ import LoginProvider from "./contextapi/Loginprobider";
 
 
 const App = () => {
-  const clientIds = '375656838975-64du44piup0s11gdnlqjek9eafmjkvl1.apps.googleusercontent.com'
+ 
   return (
-    <GoogleOAuthProvider clientId={clientIds}>
+    <GoogleOAuthProvider clientId={import.meta.env.VITE_KEY}>
             <LoginProvider>
             <Mesenger></Mesenger>
             </LoginProvider>
