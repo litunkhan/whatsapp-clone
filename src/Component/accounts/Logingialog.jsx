@@ -4,8 +4,12 @@ import qrImage from '../../assets/Qoz3Il.jpg'
 import styled from "@emotion/styled";
 import {GoogleLogin} from '@react-oauth/google'
 import jwt_decode from 'jwt-decode'
+import { useContext } from "react";
+import { LoginContext } from "../../contextapi/Loginprobider";
 
 const Logingialog = () => {
+
+    const {setAccount} = useContext(LoginContext)
     const DialogStyle = {
         height:'90%',
         width:'76%',
@@ -36,13 +40,15 @@ const Logingialog = () => {
    const onLoginsuccess = (res)=>{
        const decoded =  jwt_decode(res.credential)
        console.log(decoded)
+       setAccount(decoded)
+
    }
    const onError = (res)=>{
        console.log(res)
    }
     return (
         <Box>
-            <Dialog open={true} PaperProps={{sx:DialogStyle}}>
+            <Dialog open={true} PaperProps={{sx:DialogStyle}} hideBackdrop={true}>
                 <Components >
                     <Container>
                         
