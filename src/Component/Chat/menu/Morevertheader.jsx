@@ -1,9 +1,12 @@
+/* eslint-disable react/prop-types */
+
 import { MoreVert } from "@mui/icons-material";
 import { Menu, MenuItem } from "@mui/material";
 import { useState } from "react";
 
 
-const Morevertheader = () => {
+
+const Morevertheader = ({setopen}) => {
     const [anchorEl, setAnchorEl] = useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -11,6 +14,7 @@ const Morevertheader = () => {
   };
   const handleClose = () => {
     setAnchorEl(null);
+    setopen(true)
   };
     return (
         <>

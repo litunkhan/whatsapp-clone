@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Menuheader from "./Menuheader";
 import Menusearch from "./Menusearch";
+import Conversations from "./Conversations";
 
 
 const Menu = () => {
@@ -8,6 +9,7 @@ const Menu = () => {
         <Box>
            <Menuheader></Menuheader>
            <Menusearch></Menusearch>
+           <Conversations></Conversations>
         </Box>
     );
 };

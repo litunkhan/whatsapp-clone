@@ -24,7 +24,7 @@ const Menuheader = () => {
         <Img onClick={toggleDrawer} src={account.picture} alt="" />
         <Box sx={{display:'flex',gap:'24px'}}>
            <MessageIcon style={{marginTop:'2px'}}></MessageIcon> 
-          <Morevertheader></Morevertheader>
+          <Morevertheader  setopen ={setdrawer}></Morevertheader>
         </Box>
         </Box>
         <Profiledrawer open={drawer} setopen ={setdrawer}></Profiledrawer>
