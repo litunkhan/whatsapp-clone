@@ -6,9 +6,10 @@ export const LoginContext = createContext(null);
 
 const LoginProvider = ({ children }) => {
   const [account, setAccount] = useState();
+  const [person,setperson] = useState()
 
   return (
-    <LoginContext.Provider value={{ account, setAccount }}>
+    <LoginContext.Provider value={{ account, setAccount,person,setperson }}>
       {children}
     </LoginContext.Provider>
   );

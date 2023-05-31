@@ -18,3 +18,30 @@ export const getuser = async ()=>{
         console.log(err.message)
      }
 }
+
+export const setConversation = async(data)=>{
+     try{
+        await axios.post('http://localhost:4000/conversation/add',data)
+     }catch(err){
+        console.log(err.message)
+     }
+}
+
+export const getConversation = async(data)=>{
+   try{
+     const res=  await axios.post('http://localhost:4000/conversation/get',data)
+         return res.data
+   }catch(err){
+      console.log(err.message)
+   }
+}
+
+export const newMessage = async(messages)=>{
+
+   try{
+           await axios.post('http://localhost:4000/messages',messages)
+   }
+   catch(err){
+      console.log(err.message)
+   }
+}
