@@ -45,3 +45,13 @@ export const newMessage = async(messages)=>{
       console.log(err.message)
    }
 }
+
+export const getmessages = async(id)=>{
+     try{
+          const res = await axios.get(`http://localhost:4000/allmessages/${id}`)
+          return res.data
+     }
+     catch(err){
+      console.log(err.message)
+     }
+}
